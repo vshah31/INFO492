@@ -122,7 +122,7 @@ def test_ai_response(response_text, model, vectorizer):
 
 # 7. LangChain Integration with Groq
 def setup_langchain():
-    os.environ["GROQ_API_KEY"] = "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"
+    os.environ["GROQ_API_KEY"] = "YOUR_API_KEY"
     
     template = """
     Analyze the following statement about COVID-19 and determine if it contains misinformation.

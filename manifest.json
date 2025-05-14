@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "COVID-19 Misinformation Detector",
+  "version": "1.0",
+  "description": "Detects potential COVID-19 misinformation in tweets using machine learning",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
